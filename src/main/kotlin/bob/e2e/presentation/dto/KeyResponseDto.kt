@@ -1,17 +1,19 @@
 package bob.e2e.presentation.dto
 
 import bob.e2e.domain.model.Key
+import java.time.Instant
+
 data class KeyResponseDto(
-    val id: String,
-    var acStatus: Boolean,
-    val model: String,
-) {
-    companion object {
-        fun from(key: Key) =
+    val keypadId: String,
+    var timestamp: Instant,
+    val hash: String,
+){
+    companion object{
+        fun from(key : Key) =
             KeyResponseDto(
-                id = key.id,
-                acStatus = key.acStatus,
-                model = key.model,
+                keypadId = key.keypadId,
+                timestamp = Instant.now(),
+                hash= key.hash
             )
     }
 }

@@ -5,5 +5,5 @@ interface KeyRepository {
 
     fun selectBy(id: String): Key
 
-    fun update(car: Key)
+    fun update(key: Key)
 }

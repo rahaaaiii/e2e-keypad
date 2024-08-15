@@ -1,7 +1,9 @@
 package bob.e2e.domain.model
 
+import java.time.Instant
+
 data class Key(
-    val id: String,
-    var acStatus: Boolean,
-    val model: String
+    val keypadId: String,
+    var timestamp: Instant,
+    val hash: String
 )
